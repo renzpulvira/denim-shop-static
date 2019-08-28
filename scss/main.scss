@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Base files
+@import "./base/_normalize";
+@import "./base/_base";
+
+// Components Files
+@import "./components/_buttons";
+@import "./components/_thumbnails";
+@import "./components/_breadcrumbs";
+
+// Layout files
+@import "./layout/_header";
+@import "./layout/_footer";
+
+// Pages files
+@import "./pages/_home";
+@import "./pages/_single-product";

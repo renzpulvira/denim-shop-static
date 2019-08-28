@@ -1,0 +1,51 @@
+.thumbnail {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+  }
+
+  &--small {
+    flex: 0 24%;  
+    margin-bottom: 17px;
+    height: 300px;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      z-index: 5;
+      transition: all .3s ease;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &:hover .thumbnail__icon {
+      opacity: 1;
+    }
+  }
+}
